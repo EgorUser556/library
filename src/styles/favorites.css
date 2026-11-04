@@ -20,18 +20,25 @@
 }
 
 .favorites-header::before {
-  grid-column: 1;
-  grid-row: 1 / 3;
-  align-self: center;
-  width: var(--size-32);
-  height: var(--size-32);
-  border-radius: var(--size-8);
-  background-image: url('../assets/icons/heart-favorites.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--color-soft-gray);
-  background-size: var(--size-20) var(--size-20);
-  content: '';
+    grid-column: 1;
+    grid-row: 1 / 3;
+    place-self: center;
+    width: var(--size-32);
+    height: var(--size-32);
+    border-radius: var(--size-8);
+    background-color: var(--color-soft-gray);
+    content: '';
+}
+
+.favorites-header::after {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    place-self: center;
+    width: var(--size-20);
+    height: var(--size-20);
+    background-color: var(--color-dark-green);
+    mask: url('../assets/icons/heart.svg') center / contain no-repeat;
+    content: '';
 }
 
 .favorites-title {

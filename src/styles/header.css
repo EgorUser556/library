@@ -11,13 +11,15 @@
 }
 
 .brand-icon {
-  width: var(--size-36);
-  height: var(--size-36);
-  flex-shrink: 0;
   background-image: url('../assets/icons/book.svg');
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: var(--size-12);
+  background-color: var(--color-dark-green);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: var(--size-28) var(--size-28);
 }
 
 .brand-text {
@@ -47,8 +49,9 @@
   }
 
   .brand-icon {
-    width: var(--size-32);
-    height: var(--size-32);
+    width: var(--size-36);
+    height: var(--size-36);
+    background-size: var(--size-24) var(--size-24);
   }
 
   .brand-name {

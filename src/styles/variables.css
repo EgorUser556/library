@@ -1,0 +1,24 @@
+:root {
+  --color-off-white: #f8f6f1;
+  --color-dark-gray: #292d28;
+  --color-gray: #85847c;
+  --color-dark-green: #2d5846;
+  --color-light-gray: #eae8e1;
+
+  --size-4: 4px;
+  --size-8: 8px;
+  --size-12: 12px;
+  --size-16: 16px;
+  --size-20: 20px;
+  --size-24: 24px;
+  --size-28: 28px;
+  --size-32: 32px;
+  --size-36: 36px;
+  --size-40: 40px;
+
+  --font-body: Arial, Helvetica;
+  --font-heading: Georgia, 'Times New Roman';
+
+  --container-width: 1280px;
+  --page-padding: var(--size-24);
+}

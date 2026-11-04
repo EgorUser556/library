@@ -7,6 +7,6 @@
 
 @media (max-width: 600px) {
   :root {
-    --page-padding: var(--size-16);
+    --page-padding: var(--size-24);
   }
 }

@@ -30,7 +30,7 @@
 .brand-name {
   font-family: var(--font-heading), serif;
   font-size: var(--size-24);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 1;
 }
 

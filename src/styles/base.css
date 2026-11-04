@@ -30,6 +30,5 @@ a {
 }
 
 :focus-visible {
-  outline: var(--size-4) solid var(--color-dark-green);
-  outline-offset: var(--size-4);
+  outline: 2px solid var(--color-dark-green);
 }

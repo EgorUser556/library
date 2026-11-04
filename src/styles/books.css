@@ -1,0 +1,100 @@
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--size-16);
+}
+
+.book-card {
+  overflow: hidden;
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--size-8);
+  background-color: var(--color-white);
+}
+
+.book-cover {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  background-color: var(--color-light-gray);
+  background-image: url('../assets/images/book-cover.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.favorite-button {
+  position: absolute;
+  top: var(--size-8);
+  right: var(--size-8);
+  width: var(--size-32);
+  height: var(--size-32);
+  padding: 0;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 50%;
+  background-color: var(--color-white);
+  background-image: url('../assets/icons/heart-unactive.svg');
+  opacity: 0.8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: var(--size-16) var(--size-16);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.book-info {
+  padding: var(--size-12);
+}
+
+.book-title {
+  margin: 0;
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+}
+
+.book-author,
+.book-year {
+  margin: var(--size-4) 0 0;
+  color: var(--color-gray);
+  font-size: var(--size-12);
+  line-height: 1.4;
+}
+
+.book-title,
+.book-author {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1200px) {
+  .books-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .books-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .books-grid {
+    gap: var(--size-12);
+  }
+}
+
+@media (hover: hover) {
+  .favorite-button:hover {
+    transform: scale(1.08);
+    opacity: 1;
+    background-color: var(--color-off-white);
+  }
+}

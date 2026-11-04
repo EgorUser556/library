@@ -6,6 +6,7 @@
   --color-dark-green: #2d5846;
   --color-deep-green: #214334;
   --color-light-gray: #eae8e1;
+  --color-soft-gray: #efefed;
 
   --size-4: 4px;
   --size-8: 8px;
@@ -27,4 +28,6 @@
   --font-heading: Georgia, 'Times New Roman';
 
   --container-width: 1280px;
+
+  --page-padding: 24px;
 }

@@ -1,18 +1,18 @@
 .footer {
   padding-block: var(--size-24);
-  border-top: 2px solid var(--color-light-gray);
+  border-top: 2px solid var(--border);
 }
 
 .footer-text {
   margin: 0;
-  color: var(--color-gray);
+  color: var(--text);
   font-size: var(--size-12);
   line-height: 1.5;
   text-align: center;
 }
 
 .footer-link {
-  color: var(--color-dark-green);
+  color: var(--green);
   text-decoration: none;
 }
 

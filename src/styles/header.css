@@ -1,5 +1,5 @@
 .header {
-  border-bottom: 2px solid var(--color-light-gray);
+  border-bottom: 2px solid var(--border);
 }
 
 .header-inner {
@@ -16,7 +16,7 @@
   height: 48px;
   flex-shrink: 0;
   border-radius: var(--size-12);
-  background-color: var(--color-dark-green);
+  background-color: var(--green);
   background-repeat: no-repeat;
   background-position: center;
   background-size: var(--size-28) var(--size-28);
@@ -34,10 +34,11 @@
   font-size: var(--size-24);
   font-weight: var(--font-weight-bold);
   line-height: 1;
+  color: var(--title);
 }
 
 .brand-tagline {
-  color: var(--color-gray);
+  color: var(--text);
   font-size: var(--size-12);
   line-height: 1.4;
 }

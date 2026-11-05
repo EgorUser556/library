@@ -65,6 +65,21 @@
     border-color 0.2s ease;
 }
 
+.search-status {
+  margin: 0;
+  color: var(--text);
+  font-size: var(--font-size-14);
+  line-height: 1.5;
+}
+
+.search-status:empty {
+  display: none;
+}
+
+.search-input::-webkit-search-cancel-button {
+    display: none;
+}
+
 @media (hover: hover) {
   .search-button:hover {
     background-color: var(--deep-green);

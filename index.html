@@ -28,7 +28,7 @@
             Search millions of books, build your personal library, and never lose track of what to
             read next.
           </p>
-          <form class="search-form">
+          <form class="search-form" novalidate>
             <input
               class="search-input"
               id="search-input"
@@ -42,116 +42,16 @@
       </section>
       <div class="container library-layout">
         <section class="books-section">
-          <div class="books-grid" id="books-grid">
-            <article class="book-card">
-              <div class="book-cover">
-                <button class="favorite-button" type="button"></button>
-              </div>
-
-              <div class="book-info">
-                <h2 class="book-title">The Great Gatsby</h2>
-                <p class="book-author">F. Scott Fitzgerald</p>
-                <p class="book-year">1925</p>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <button class="favorite-button" type="button"></button>
-              </div>
-              <div class="book-info">
-                <h2 class="book-title">The Great Gatsby</h2>
-                <p class="book-author">F. Scott Fitzgerald</p>
-                <p class="book-year">1925</p>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <button class="favorite-button" type="button"></button>
-              </div>
-              <div class="book-info">
-                <h2 class="book-title">The Great Gatsby</h2>
-                <p class="book-author">F. Scott Fitzgerald</p>
-                <p class="book-year">1925</p>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <button class="favorite-button" type="button"></button>
-              </div>
-              <div class="book-info">
-                <h2 class="book-title">The Great Gatsby</h2>
-                <p class="book-author">F. Scott Fitzgerald</p>
-                <p class="book-year">1925</p>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <button class="favorite-button" type="button"></button>
-              </div>
-              <div class="book-info">
-                <h2 class="book-title">The Great Gatsby</h2>
-                <p class="book-author">F. Scott Fitzgerald</p>
-                <p class="book-year">1925</p>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <button class="favorite-button" type="button"></button>
-              </div>
-              <div class="book-info">
-                <h2 class="book-title">The Great Gatsby</h2>
-                <p class="book-author">F. Scott Fitzgerald</p>
-                <p class="book-year">1925</p>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <button class="favorite-button" type="button"></button>
-              </div>
-              <div class="book-info">
-                <h2 class="book-title">The Great Gatsby</h2>
-                <p class="book-author">F. Scott Fitzgerald</p>
-                <p class="book-year">1925</p>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <button class="favorite-button" type="button"></button>
-              </div>
-              <div class="book-info">
-                <h2 class="book-title">The Great Gatsby</h2>
-                <p class="book-author">F. Scott Fitzgerald</p>
-                <p class="book-year">1925</p>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <button class="favorite-button" type="button"></button>
-              </div>
-              <div class="book-info">
-                <h2 class="book-title">The Great Gatsby</h2>
-                <p class="book-author">F. Scott Fitzgerald</p>
-                <p class="book-year">1925</p>
-              </div>
-            </article>
-            <article class="book-card">
-              <div class="book-cover">
-                <button class="favorite-button" type="button"></button>
-              </div>
-              <div class="book-info">
-                <h2 class="book-title">The Great Gatsby</h2>
-                <p class="book-author">F. Scott Fitzgerald</p>
-                <p class="book-year">1925</p>
-              </div>
-            </article>
-          </div>
+          <section class="books-section">
+            <p class="search-status" id="search-status"></p>
+            <div class="books-grid" id="books-grid"></div>
+          </section>
         </section>
         <aside class="favorites-panel">
           <div class="favorites-header">
             <h2 class="favorites-title">Favorites</h2>
             <p class="favorites-count" id="favorites-count">2 books saved</p>
           </div>
-
           <div class="favorites-list" id="favorites-list">
             <article class="favorite-item">
               <div class="favorite-cover"></div>

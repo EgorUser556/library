@@ -8,13 +8,20 @@
 .library-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 240px;
-  align-items: stretch;
   gap: var(--size-20);
   padding-bottom: var(--size-40);
 }
 
 .books-section {
   min-width: 0;
+}
+
+.library-layout:has(.search-status[data-state]) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.library-layout:has(.search-status[data-state]) .favorites-panel {
+  display: none;
 }
 
 @media (max-width: 900px) {
@@ -28,9 +35,5 @@
   .library-layout {
     grid-template-columns: minmax(0, 1fr);
     padding-bottom: var(--size-32);
-  }
-
-  :root {
-    --page-padding: var(--size-24);
   }
 }

@@ -1,12 +1,6 @@
 import { searchBooks } from '../api/book-api.js';
 import { DEFAULT_SEARCH_QUERY } from '../api/config.js';
-import {
-  renderBooks,
-  showSearchMessage,
-  setSearchPending,
-  setSearchValidation,
-  showSearchFeedback,
-} from '../components/book-card/book-view.js';
+import { renderBooks, showStatus, setSearchValidation } from '../components/book-card/book-view.js';
 
 export const initBookSearch = () => {
   const searchForm = document.querySelector('.search-form');
@@ -22,14 +16,11 @@ export const initBookSearch = () => {
     }
 
     setSearchValidation();
-
     activeController?.abort();
 
     const controller = new AbortController();
     activeController = controller;
-
-    setSearchPending(true);
-    showSearchMessage('Loading...');
+    showStatus('loading', 'Loading...');
 
     try {
       const books = await searchBooks(query, {
@@ -41,21 +32,18 @@ export const initBookSearch = () => {
       }
 
       if (books.length === 0) {
-        showSearchFeedback('No books found', 'Try a different title, author, or keyword.');
+        showStatus('empty', 'No books found', 'Try a different title, author, or keyword.');
         return;
       }
-
       renderBooks(books);
     } catch (error) {
       if (controller.signal.aborted || activeController !== controller) {
         return;
       }
-
-      showSearchFeedback('Unable to load books', 'Check your connection and try searching again.');
+      showStatus('error', 'Unable to load books', 'Check your connection and try searching again.');
     } finally {
       if (activeController === controller) {
         activeController = null;
-        setSearchPending(false);
       }
     }
   };
@@ -70,6 +58,5 @@ export const initBookSearch = () => {
       setSearchValidation();
     }
   });
-
   void runSearch(DEFAULT_SEARCH_QUERY);
 };

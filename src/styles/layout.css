@@ -17,6 +17,16 @@
   min-width: 0;
 }
 
+.library-layout.is-loading,
+.library-layout.has-feedback {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.library-layout.is-loading .favorites-panel,
+.library-layout.has-feedback .favorites-panel {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .library-layout {
     grid-template-columns: minmax(0, 1fr) 200px;
@@ -33,12 +43,4 @@
   :root {
     --page-padding: var(--size-24);
   }
-}
-
-.library-layout.is-loading {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.library-layout.is-loading .favorites-panel {
-  display: none;
 }

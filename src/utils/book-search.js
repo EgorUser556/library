@@ -4,6 +4,8 @@ import {
   renderBooks,
   showSearchMessage,
   setSearchPending,
+  setSearchValidation,
+  showSearchFeedback,
 } from '../components/book-card/book-view.js';
 
 export const initBookSearch = () => {
@@ -13,15 +15,15 @@ export const initBookSearch = () => {
   let activeController = null;
 
   const runSearch = async (query) => {
-    activeController?.abort();
-    activeController = null;
-
     if (!query) {
-      setSearchPending(false);
-      showSearchMessage('Enter a search query.');
+      setSearchValidation('Enter a book title, author, or keyword.');
       searchInput.focus();
       return;
     }
+
+    setSearchValidation();
+
+    activeController?.abort();
 
     const controller = new AbortController();
     activeController = controller;
@@ -39,7 +41,7 @@ export const initBookSearch = () => {
       }
 
       if (books.length === 0) {
-        showSearchMessage('No books found.');
+        showSearchFeedback('No books found', 'Try a different title, author, or keyword.');
         return;
       }
 
@@ -49,7 +51,7 @@ export const initBookSearch = () => {
         return;
       }
 
-      showSearchMessage('Unable to load books. Please try again.');
+      showSearchFeedback('Unable to load books', 'Check your connection and try searching again.');
     } finally {
       if (activeController === controller) {
         activeController = null;
@@ -61,6 +63,12 @@ export const initBookSearch = () => {
   searchForm.addEventListener('submit', (event) => {
     event.preventDefault();
     void runSearch(searchInput.value.trim());
+  });
+
+  searchInput.addEventListener('input', () => {
+    if (searchInput.value.trim()) {
+      setSearchValidation();
+    }
   });
 
   void runSearch(DEFAULT_SEARCH_QUERY);

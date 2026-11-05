@@ -1,6 +1,10 @@
 import { searchBooks } from '../api/book-api.js';
 import { DEFAULT_SEARCH_QUERY } from '../api/config.js';
-import { renderBooks, showSearchMessage, setSearchPending } from '../components/book-card/book-view.js';
+import {
+  renderBooks,
+  showSearchMessage,
+  setSearchPending,
+} from '../components/book-card/book-view.js';
 
 export const initBookSearch = () => {
   const searchForm = document.querySelector('.search-form');
@@ -23,7 +27,7 @@ export const initBookSearch = () => {
     activeController = controller;
 
     setSearchPending(true);
-    showSearchMessage('Loading...', { clearResults: false });
+    showSearchMessage('Loading...');
 
     try {
       const books = await searchBooks(query, {

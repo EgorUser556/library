@@ -34,3 +34,11 @@
     --page-padding: var(--size-24);
   }
 }
+
+.library-layout.is-loading {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.library-layout.is-loading .favorites-panel {
+  display: none;
+}

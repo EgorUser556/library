@@ -20,13 +20,17 @@ export const createBookCard = (book) => {
     image.alt = `Cover of ${book.title}`;
     image.loading = 'lazy';
 
-    image.addEventListener('load', () => {
+    image.addEventListener(
+      'load',
+      () => {
         coverPlaceholder.remove();
       },
       { once: true },
     );
 
-    image.addEventListener('error', () => {
+    image.addEventListener(
+      'error',
+      () => {
         image.remove();
       },
       { once: true },

@@ -14,7 +14,7 @@
 .book-cover {
   position: relative;
   aspect-ratio: 2 / 3;
-  background-color: var(--border);
+  background-color: var(--secondary);
   background-image: url('../assets/images/book-cover.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -50,8 +50,9 @@
 .book-title {
   margin: 0;
   font-size: var(--font-size-14);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: 1.4;
+  color: var(--title);
 }
 
 .book-author,
@@ -60,10 +61,6 @@
   color: var(--text);
   font-size: var(--size-12);
   line-height: 1.4;
-}
-
-.book-title {
-  color: var(--title);
 }
 
 .book-title,

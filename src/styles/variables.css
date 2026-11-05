@@ -31,10 +31,11 @@
   --font-size-14: 14px;
 
   --font-weight-regular: 400;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --font-body: Arial, Helvetica;
-  --font-heading: Georgia, 'Times New Roman';
+  --font-body: 'Source Sans 3', Arial, Helvetica;
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman';
 
   --container-width: 1280px;
 

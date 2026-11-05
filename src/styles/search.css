@@ -9,7 +9,6 @@
   font-size: var(--size-40);
   font-weight: var(--font-weight-bold);
   color: var(--title);
-  letter-spacing: -1px;
   line-height: 1.2;
 }
 

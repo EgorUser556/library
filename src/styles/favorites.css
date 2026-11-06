@@ -75,6 +75,7 @@
   color: var(--text);
   font-size: var(--font-size-14);
   line-height: 1.5;
+  text-align: center;
 }
 
 .favorite-item {
@@ -99,14 +100,15 @@
 
 .favorite-cover {
   width: 60px;
-  aspect-ratio: 2 / 3;
   flex-shrink: 0;
+  overflow: hidden;
   border-radius: var(--size-4);
   background-color: var(--secondary);
-  background-image: url('../assets/images/book-cover.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+}
+
+.favorite-cover .cover-placeholder {
+  padding: var(--size-4);
+  font-size: var(--size-12);
 }
 
 .favorite-info {
@@ -150,6 +152,14 @@
   background-size: var(--size-16) var(--size-16);
   cursor: pointer;
   transition: background-color 0.2s ease;
+}
+
+.favorite-button[aria-pressed='true'] {
+  opacity: 1;
+}
+
+.favorite-button[aria-pressed='true']::before {
+  background-color: var(--green);
 }
 
 @media (max-width: 600px) {

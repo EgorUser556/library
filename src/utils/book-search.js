@@ -1,10 +1,13 @@
 import { searchBooks } from '../api/book-api.js';
 import { DEFAULT_SEARCH_QUERY } from '../api/config.js';
 import { renderBooks, showStatus, setSearchValidation } from '../components/book-card/book-view.js';
+import { initAuthorFilter } from './author-filter.js';
 
 export const initBookSearch = () => {
   const searchForm = document.querySelector('.search-form');
   const searchInput = document.querySelector('#search-input');
+
+  const authorFilter = initAuthorFilter(renderBooks);
 
   let activeController = null;
 
@@ -20,6 +23,7 @@ export const initBookSearch = () => {
 
     const controller = new AbortController();
     activeController = controller;
+    authorFilter.clear();
     showStatus('loading', 'Loading...');
 
     try {
@@ -35,7 +39,7 @@ export const initBookSearch = () => {
         showStatus('empty', 'No books found', 'Try a different title, author, or keyword.');
         return;
       }
-      renderBooks(books);
+      authorFilter.setBooks(books);
     } catch (error) {
       if (controller.signal.aborted || activeController !== controller) {
         return;

@@ -29,7 +29,6 @@
   width: 240px;
   max-width: 100%;
   min-width: 0;
-  min-height: var(--size-32);
   height: var(--size-32);
   padding: var(--size-4) var(--size-12);
   border: 1px solid var(--border);

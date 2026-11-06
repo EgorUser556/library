@@ -109,22 +109,22 @@
 }
 
 .favorite-cover-placeholder {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    padding: var(--size-4);
-    color: var(--text);
-    font-size: var(--size-12);
-    text-align: center;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--size-4);
+  color: var(--text);
+  font-size: var(--size-12);
+  text-align: center;
 }
 
 .favorite-cover-image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .favorite-info {
@@ -168,6 +168,11 @@
   background-size: var(--size-16) var(--size-16);
   cursor: pointer;
   transition: background-color 0.2s ease;
+}
+
+.favorite-button[aria-pressed='true'] {
+  background-image: url('../assets/icons/heart-active.svg');
+  opacity: 1;
 }
 
 @media (max-width: 600px) {

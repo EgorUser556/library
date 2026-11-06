@@ -1,4 +1,11 @@
 import { COVERS_URL } from '../../api/config.js';
+import { isFavorite, toggleFavorite } from '../../store/favorites-store.js';
+
+const updateFavoriteButton = (button, bookId) => {
+  const active = isFavorite(bookId);
+
+  button.setAttribute('aria-pressed', String(active));
+};
 
 export const createBookCard = (book) => {
   const card = document.createElement('article');
@@ -45,6 +52,12 @@ export const createBookCard = (book) => {
   favoriteButton.className = 'favorite-button';
   favoriteButton.type = 'button';
 
+  updateFavoriteButton(favoriteButton, book.id, book.title);
+
+  favoriteButton.addEventListener('click', () => {
+    toggleFavorite(book);
+  });
+
   cover.append(favoriteButton);
 
   const info = document.createElement('div');
@@ -66,4 +79,12 @@ export const createBookCard = (book) => {
   card.append(cover, info);
 
   return card;
+};
+
+export const syncFavoriteButtons = () => {
+  document.querySelectorAll('.book-card').forEach((card) => {
+    const button = card.querySelector('.favorite-button');
+
+    updateFavoriteButton(button, card.dataset.bookId);
+  });
 };

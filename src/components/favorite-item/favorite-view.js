@@ -1,5 +1,6 @@
 import { getFavorites, removeFavorite, subscribe } from '../../store/favorites-store.js';
 import { createFavoriteItem } from './favorite-item.js';
+import { createElement } from '../../utils/create-element.js';
 
 const favoritesList = document.querySelector('#favorites-list');
 const favoritesCount = document.querySelector('#favorites-count');
@@ -10,9 +11,11 @@ const renderFavorites = (books) => {
   favoritesCount.textContent = `${count} ${count === 1 ? 'book' : 'books'} saved`;
 
   if (count === 0) {
-    const message = document.createElement('p');
-    message.className = 'favorites-empty';
-    message.textContent = 'No favorites yet. Click the heart on a book to save it.';
+    const message = createElement(
+      'p',
+      'favorites-empty',
+      'No favorites yet. Click the heart on a book to save it.',
+    );
 
     favoritesList.replaceChildren(message);
     return;

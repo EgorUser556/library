@@ -36,7 +36,9 @@ export const isFavorite = (bookId) => {
 const saveFavorites = () => {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
-  } catch {}
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const notifyListeners = () => {

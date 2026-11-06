@@ -18,8 +18,6 @@ export const createFavoriteItem = (book, onRemove) => {
   const year = createElement('p', 'favorite-year', book.year ?? 'Year unknown');
 
   const removeButton = createElement('button', 'favorite-remove');
-  removeButton.type = 'button';
-  removeButton.setAttribute('aria-label', `Remove ${book.title} from favorites`);
 
   removeButton.addEventListener('click', () => {
     onRemove(book.id);

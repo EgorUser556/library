@@ -155,8 +155,11 @@
 }
 
 .favorite-button[aria-pressed='true'] {
-  background-image: url('../assets/icons/heart-active.svg');
   opacity: 1;
+}
+
+.favorite-button[aria-pressed='true']::before {
+  background-color: var(--green);
 }
 
 @media (max-width: 600px) {

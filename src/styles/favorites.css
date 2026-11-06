@@ -154,14 +154,6 @@
   transition: background-color 0.2s ease;
 }
 
-.favorite-button[aria-pressed='true'] {
-  opacity: 1;
-}
-
-.favorite-button[aria-pressed='true']::before {
-  background-color: var(--green);
-}
-
 @media (max-width: 600px) {
   .favorites-panel {
     contain: none;

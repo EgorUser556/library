@@ -17,7 +17,7 @@ export const createBookCard = (book) => {
   const favoriteButton = createElement('button', 'favorite-button');
   favoriteButton.type = 'button';
 
-  updateFavoriteButton(favoriteButton, book.id, book.title);
+  updateFavoriteButton(favoriteButton, book.id);
 
   favoriteButton.addEventListener('click', () => {
     toggleFavorite(book);

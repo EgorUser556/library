@@ -131,7 +131,6 @@
   }
 
   .search-form {
-    flex-direction: column;
     margin-top: var(--size-20);
   }
 

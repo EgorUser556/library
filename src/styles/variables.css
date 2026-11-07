@@ -3,10 +3,7 @@
 
   --white: #ffffff;
   --green: #27694d;
-  --yellow: #daa520;
   --red: #ef4444;
-  --brown: #383129;
-  --black: #2a2622;
   --deep-green: #214334;
 
   --title: #2b2622;
@@ -16,7 +13,6 @@
   --background: #f7f4ef;
   --card: #fcfaf7;
   --secondary: #eeebe4;
-  --shadow: #c4b8a8;
   --favorite: #eaf0ed;
   --input-background: var(--white);
   --favorite-button-background: var(--white);

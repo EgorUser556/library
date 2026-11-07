@@ -5,7 +5,6 @@ import { initAuthorFilter } from './author-filter.js';
 import { debounce } from './debounce.js';
 
 export const initBookSearch = () => {
-  const searchForm = document.querySelector('.search-form');
   const searchInput = document.querySelector('#search-input');
 
   const authorFilter = initAuthorFilter(renderBooks);

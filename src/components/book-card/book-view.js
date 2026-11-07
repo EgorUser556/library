@@ -30,13 +30,17 @@ export const showStatus = (state, title, description = '') => {
   updateLoadingControls(state === 'loading');
 };
 
-export const renderBooks = (books) => {
-  booksGrid.replaceChildren(...books.map((book) => createBookCard(book)));
-
+export const clearSearchStatus = () => {
   delete searchStatus.dataset.state;
   searchStatus.replaceChildren();
 
   updateLoadingControls(false);
+};
+
+export const renderBooks = (books) => {
+  booksGrid.replaceChildren(...books.map((book) => createBookCard(book)));
+
+  clearSearchStatus();
 };
 
 export const setSearchValidation = (message = '') => {

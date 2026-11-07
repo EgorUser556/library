@@ -2,13 +2,11 @@ import { createBookCard } from './book-card.js';
 
 const booksGrid = document.querySelector('#books-grid');
 const searchStatus = document.querySelector('#search-status');
-const searchButton = document.querySelector('.search-button');
 const searchInput = document.querySelector('#search-input');
 const searchValidation = document.querySelector('#search-validation');
 
 const updateLoadingControls = (isLoading) => {
   booksGrid.setAttribute('aria-busy', String(isLoading));
-  searchButton.textContent = isLoading ? 'Searching...' : 'Search';
 };
 
 export const showStatus = (state, title, description = '') => {

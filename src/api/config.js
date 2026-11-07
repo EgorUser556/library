@@ -8,3 +8,5 @@ export const SEARCH_LIMIT = 10;
 export const DEFAULT_SEARCH_QUERY = 'classic literature';
 
 export const SEARCH_DEBOUNCE_DELAY = 400;
+
+export const SEARCH_MIN_LENGTH = 3;

@@ -1,5 +1,5 @@
 import { searchBooks } from '../api/book-api.js';
-import { DEFAULT_SEARCH_QUERY, SEARCH_DEBOUNCE_DELAY } from '../api/config.js';
+import { DEFAULT_SEARCH_QUERY, SEARCH_DEBOUNCE_DELAY, SEARCH_MIN_LENGTH } from '../api/config.js';
 import { renderBooks, showStatus, setSearchValidation } from '../components/book-card/book-view.js';
 import { initAuthorFilter } from './author-filter.js';
 import { debounce } from './debounce.js';
@@ -79,25 +79,16 @@ export const initBookSearch = () => {
       return;
     }
 
+    if (query.length < SEARCH_MIN_LENGTH) {
+      setSearchValidation(`Enter at least ${SEARCH_MIN_LENGTH} characters.`);
+      return;
+    }
+
     debouncedSearch(query);
   };
 
   searchInput.addEventListener('input', handleInput);
   searchInput.addEventListener('compositionend', handleInput);
-
-  searchForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const query = searchInput.value.trim();
-
-    if (!query) {
-      setSearchValidation('Enter a book title, author, or keyword.');
-      return;
-    }
-
-    debouncedSearch.cancel();
-    void runSearch(query);
-  });
 
   void runSearch(DEFAULT_SEARCH_QUERY);
 };

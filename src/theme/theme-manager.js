@@ -1,4 +1,4 @@
-import { THEME_STORAGE_KEY, THEME_MODES, DEFAULT_THEME } from './config.js';
+import { THEME_STORAGE_KEY, THEME_MODES, DEFAULT_THEME, THEME } from './config.js';
 
 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
 const listeners = new Set();
@@ -19,15 +19,16 @@ const loadTheme = () => {
 const saveTheme = () => {
   try {
     localStorage.setItem(THEME_STORAGE_KEY, theme);
-  } catch {
-    // При недоступном хранилище тема работает в текущей вкладке.
+  } catch (error) {
+    console.log(error);
   }
 };
 
-const applyTheme = () => {
-  const resolvedTheme = theme === 'system' ? (systemTheme.matches ? 'dark' : 'light') : theme;
+const resolveTheme = (mode) =>
+  mode === THEME.SYSTEM ? (systemTheme.matches ? THEME.DARK : THEME.LIGHT) : mode;
 
-  document.documentElement.dataset.theme = resolvedTheme;
+const applyTheme = () => {
+  document.documentElement.dataset.theme = resolveTheme(theme);
 };
 
 const notifyListeners = () => {
@@ -69,7 +70,7 @@ export const initTheme = () => {
   applyTheme();
 
   systemTheme.addEventListener('change', () => {
-    if (theme === 'system') {
+    if (theme === THEME.SYSTEM) {
       applyTheme();
     }
   });

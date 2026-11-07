@@ -25,13 +25,6 @@ module.exports = (_, argv) => {
             filename: 'assets/icons/[name][ext]',
           },
         },
-        {
-          test: /\.(png|jpe?g|webp)$/i,
-          type: 'asset/resource',
-          generator: {
-            filename: 'assets/images/[name][ext]',
-          },
-        },
       ],
     },
 

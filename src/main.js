@@ -1,11 +1,14 @@
 import './styles/main.css';
 
-const root = document.querySelector('#app');
+import { initTheme } from './theme/theme-manager.js';
+import { initThemeSwitcher } from './components/theme-switcher/theme-switcher.js';
+import { initBookSearch } from './utils/book-search.js';
+import { initFavorites } from './components/favorite-item/favorite-view.js';
+import { syncFavoriteButtons } from './components/book-card/book-card.js';
+import { subscribe } from './store/favorites-store.js';
 
-const title = document.createElement('h1');
-title.textContent = 'The Library';
-
-const description = document.createElement('p');
-description.textContent = 'Project setup is complete.';
-
-root.append(title, description);
+initTheme();
+initThemeSwitcher();
+subscribe(syncFavoriteButtons);
+initBookSearch();
+initFavorites();

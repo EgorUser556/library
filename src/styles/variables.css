@@ -1,0 +1,66 @@
+:root {
+  color-scheme: light;
+
+  --white: #ffffff;
+  --green: #27694d;
+  --red: #ef4444;
+  --deep-green: #214334;
+
+  --title: #2b2622;
+  --text: #7c736a;
+  --border: #e7e2da;
+
+  --background: #f7f4ef;
+  --card: #fcfaf7;
+  --secondary: #eeebe4;
+  --favorite: #eaf0ed;
+  --input-background: var(--white);
+  --favorite-button-background: var(--white);
+  --button-text: var(--white);
+
+  --size-4: 4px;
+  --size-8: 8px;
+  --size-12: 12px;
+  --size-16: 16px;
+  --size-20: 20px;
+  --size-24: 24px;
+  --size-28: 28px;
+  --size-32: 32px;
+  --size-36: 36px;
+  --size-40: 40px;
+
+  --font-size-14: 14px;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-body: 'Source Sans 3', Arial, Helvetica;
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman';
+
+  --container-width: 1280px;
+
+  --page-padding: 24px;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --green: #8bc9a9;
+  --deep-green: #a8d9bf;
+  --red: #ff8a8a;
+
+  --title: #f2ece4;
+  --text: #bdb3a7;
+  --border: #51483e;
+
+  --background: #1c1916;
+  --card: #26211d;
+  --secondary: #342d26;
+  --shadow: #100e0c;
+  --favorite: #293b31;
+
+  --input-background: #26211d;
+  --favorite-button-background: #fcfaf7;
+  --button-text: #1c1916;
+}

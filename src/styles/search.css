@@ -35,12 +35,12 @@
   padding: var(--size-8) var(--size-12) var(--size-8) var(--size-40);
   border: 1px solid var(--border);
   border-radius: var(--size-8);
-  background-color: var(--white);
+  background-color: var(--input-background);
   background-image: url('../assets/icons/search.svg');
   background-repeat: no-repeat;
   background-position: left var(--size-12) center;
   background-size: var(--size-16) var(--size-16);
-  color: var(--black);
+  color: var(--title);
   font-size: var(--font-size-14);
 }
 

@@ -29,7 +29,7 @@
   padding: 0;
   border: 1px solid var(--border);
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--favorite-button-background);
   background-image: url('../assets/icons/heart.svg');
   opacity: 0.8;
   background-repeat: no-repeat;
@@ -101,6 +101,6 @@
   .favorite-button:hover {
     transform: scale(1.08);
     opacity: 1;
-    background-color: var(--secondary);
+    background-color: var(--favorite-button-background);
   }
 }

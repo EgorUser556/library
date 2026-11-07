@@ -58,4 +58,8 @@
   .brand-name {
     font-size: var(--size-20);
   }
+
+  .brand-tagline {
+    display: none;
+  }
 }

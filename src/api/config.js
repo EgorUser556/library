@@ -6,3 +6,5 @@ export const COVERS_URL = 'https://covers.openlibrary.org/b/id';
 export const SEARCH_LIMIT = 10;
 
 export const DEFAULT_SEARCH_QUERY = 'classic literature';
+
+export const SEARCH_DEBOUNCE_DELAY = 400;

@@ -1,5 +1,6 @@
 :root {
   color-scheme: light;
+
   --white: #ffffff;
   --green: #27694d;
   --yellow: #daa520;
@@ -44,4 +45,26 @@
   --container-width: 1280px;
 
   --page-padding: 24px;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --green: #8bc9a9;
+  --deep-green: #a8d9bf;
+  --red: #ff8a8a;
+
+  --title: #f2ece4;
+  --text: #bdb3a7;
+  --border: #51483e;
+
+  --background: #1c1916;
+  --card: #26211d;
+  --secondary: #342d26;
+  --shadow: #100e0c;
+  --favorite: #293b31;
+
+  --input-background: #26211d;
+  --favorite-button-background: #fcfaf7;
+  --button-text: #1c1916;
 }
